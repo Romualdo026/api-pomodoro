@@ -13,6 +13,7 @@ class GetClientesHandler implements Handler {
         body: ClienteOutputDTO.toCollectionDTO(clientes),
       );
     } on Exception catch (e) {
+      print(e.toString());
       return ResponseHandler(status: StatusHandler.internalServerError);
     }
   }

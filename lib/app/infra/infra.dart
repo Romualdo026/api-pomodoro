@@ -5,6 +5,7 @@ import 'package:api_pomodoro/app/domain/domain.dart';
 
 part 'dao/clientes/get_clientes_dao.dart';
 part 'connection/connection.dart';
+part 'connection/fake/fake_db.dart';
 
 class ClienteDB {
   ClienteDB._();
