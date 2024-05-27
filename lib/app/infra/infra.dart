@@ -2,7 +2,6 @@ library infra;
 
 import 'package:api_pomodoro/app/data/data.dart';
 import 'package:api_pomodoro/app/domain/domain.dart';
-import 'package:postgres/legacy.dart';
 import 'package:postgres/postgres.dart';
 
 part 'dao/clientes/get_clientes_dao.dart';

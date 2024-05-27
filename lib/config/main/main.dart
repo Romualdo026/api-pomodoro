@@ -1,5 +1,9 @@
 part of '../config.dart';
 
 final controllers = <Controller>[
-  ClientesController(getClientesUseCase: GetClientesService(getClientesGateway: GetClientesDao(connection: FakeDb()),),),
+  ClientesController(
+    getClientesUseCase: GetClientesService(
+      getClientesGateway: GetClientesDao(connection: PostgresSQL()),
+    ),
+  ),
 ];
