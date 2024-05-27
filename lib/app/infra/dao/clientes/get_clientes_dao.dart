@@ -10,11 +10,15 @@ class GetClientesDao implements GetClientesGateway {
 
   @override
   Future<List<Cliente>> call() async {
+    late List<Cliente> map;
     try {
       final rows = await connection.query('SELECT * FROM clientes');
-      return rows.map(ClienteDB.toEntity).toList();
+      map = rows.map(ClienteDB.toEntity).toList();
+    } catch (e) {
+      print(e);
     } finally {
       await connection.close();
     }
+    return map;
   }
 }

@@ -14,7 +14,7 @@ class PostgresSQL implements Connection {
       'localhost',
       5432,
       'postgres',
-      username: 'postgress',
+      username: 'postgres',
       password: 'docker',
     );
 
